@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دار فضة - Home</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <a href="#cart" class="fixed-cart-icon">
+        🛒 <span id="cart-item-count">0</span>
+    </a>
+
+    <header>
+        <h1>📚 دار فضة | Dar Fidda</h1>
+        <p>مجموعة مختارة من الأزياء الراقية والهدايا المميزة.</p>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#abaya">قسم العباءات</a></li>
+            <li><a href="#isharbat">قسم الإيشاربات</a></li>
+            <li><a href="#bags">الحقائب</a></li>
+            <li><a href="#gifts">هدايا التكليف</a></li>
+            <li><a href="#extra">الإضافيات</a></li> 
+        </ul>
+    </nav>
+    
+    <main>
+
+        <section id="suggestions" class="category-section" style="padding-top: 0; display: none;"> 
+            <h2 style="margin-top: 40px;">🎁 إليك مقترحاتنا لهذا الأسبوع</h2>
+            <div id="suggestion-carousel" class="products-grid">
+                </div>
+        </section>
+
+        <section id="abaya" class="category-section">
+            <h2>👗 قسم العباءات</h2>
+            <div class="products-grid">
+                </div>
+        </section>
+
+        <section id="isharbat" class="category-section">
+            <h2>🧣 قسم الإيشاربات</h2>
+            <div class="products-grid">
+                </div>
+        </section>
+
+        <section id="bags" class="category-section">
+            <h2>👜 الحقائب</h2>
+            <div class="products-grid">
+                </div>
+        </section>
+        
+        <section id="gifts" class="category-section">
+            <h2>🎁 هدايا التكليف</h2>
+            <div class="products-grid">
+                </div>
+        </section>
+        
+        <section id="extra" class="category-section">
+            <h2>➕ الإضافيات (Extensions, Pants, etc.)</h2>
+            <div class="products-grid">
+                </div>
+        </section>
+
+        <section id="cart" class="category-section">
+            <h2>🛒 سلة المشتريات</h2>
+            <div class="cart-summary">
+                </div>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 دار فضة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>✅ إتمام الطلب</h2>
+            
+            <div id="checkout-details">
+                </div>
+            
+            <form id="checkout-form" action="[https://formspree.io/f/xkgyglrj]" method="POST">
+                
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">رقم الهاتف (8 أرقام):</label>
+                <div style="display: flex; direction: ltr; align-items: center; gap: 5px; margin-bottom: 10px;">
+                    <span style="font-size: 1.1em; font-weight: bold; color: #44563C;">+961</span>
+                    <input type="tel" id="phone" name="phone_number" 
+                           pattern="^\d{8}$" 
+                           placeholder="76123456" 
+                           maxlength="8"
+                           title="يجب أن يكون 8 أرقام (مثال: 76123456)"
+                           required
+                           style="flex-grow: 1; text-align: left; margin-bottom: 0;">
+                    <input type="hidden" name="country_code" value="+961">
+                </div>
+                
+                <label for="address">العنوان كاملاً (المدينة، الشارع، رقم المبنى):</label>
+                <textarea id="address" name="address" required></textarea>
+                
+                <label for="email">البريد الإلكتروني (اختياري، للفاتورة الإلكترونية):</label>
+                <input type="email" id="email" name="_replyto" placeholder="example@domain.com">
+
+                
+                <div class="promo-code-area" style="margin-top: 20px; border: 1px solid #A5C189; padding: 15px; border-radius: 5px; text-align: right;">
+                    <label for="promo-code" style="text-align: right;">رمز الخصم (كوبون):</label>
+                    <div style="display: flex; gap: 10px; direction: rtl;">
+                        <input type="text" id="promo-code" name="promo-code" style="flex-grow: 1; margin-bottom: 0;" placeholder="أدخل الرمز هنا">
+                        <button type="button" id="apply-promo" class="cta-button" style="width: 100px; padding: 10px 0; font-size: 0.9em;">تطبيق</button>
+                    </div>
+                    <p id="promo-message" style="margin-top: 5px; font-size: 0.9em; text-align: right;"></p>
+                    <input type="hidden" id="applied-promo-code" name="applied_promo_code">
+                </div>
+                
+                <p class="final-total-line">
+                    إجمالي الطلب: <span id="modal-order-total">0.00 $</span>
+                </p>
+                <p class="final-total-line">
+                    تكلفة التوصيل: <span id="modal-delivery-charge">10.00 $</span>
+                </p>
+                <p class="final-total-line final-total">
+                    الإجمالي النهائي: <span id="modal-final-total">0.00 $</span>
+                </p>
+                
+                <button type="submit" class="cta-button">تأكيد الطلب والدفع</button>
+                
+                <input type="hidden" id="order-summary-hidden" name="Order_Summary">
+                <input type="hidden" name="_subject" value="⭐ طلب جديد من متجر دار فضة">
+                </form>
+        </div>
+    </div>
+    
+    <div id="size-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn size-close-btn">&times;</span>
+            <h2 id="size-modal-product-name">اختر مقاس العباية</h2>
+            
+            <label for="size-select">المقاسات المتوفرة:</label>
+            <select id="size-select"></select>
+            
+            <button class="cta-button" id="confirm-size-add" style="margin-top: 20px;">
+                تأكيد الإضافة للسلة
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>

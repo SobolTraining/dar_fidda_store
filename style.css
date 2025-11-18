@@ -1,0 +1,316 @@
+/* General Setup */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    direction: rtl; /* دعم اللغة العربية */
+    text-align: right; 
+}
+
+header {
+    background-color: #44563C; /* لون أخضر داكن */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #44563C;
+    border-bottom: 2px solid #A5C189; /* لون أخضر فاتح للمسة جمالية */
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: #A5C189; /* لون أخضر فاتح للقائمة */
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #44563C;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* Products Grid (للمنتجات الرئيسية) */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 300px هو الحجم الكامل */
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px; /* للعباءات - الحجم الأصلي */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    color: #44563C;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e67e22; /* لون برتقالي للسعر */
+    margin-bottom: 10px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #44563C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 1em;
+}
+
+.cta-button:hover:not([disabled]) {
+    background-color: #556c52;
+}
+
+/* Sections Control */
+.category-section {
+    display: none;
+    padding-bottom: 40px;
+}
+
+/* Fixed Cart Icon */
+.fixed-cart-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #e67e22;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cart-item-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #c0392b;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 0.8em;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1001; 
+    right: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: right;
+}
+
+.close-btn {
+    color: #aaa;
+    float: left; 
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Checkout Form Styling */
+#checkout-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #44563C;
+}
+
+#checkout-form input[type="text"],
+#checkout-form input[type="tel"],
+#checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+#checkout-form textarea {
+    resize: vertical;
+}
+
+.final-total-line {
+    margin-top: 10px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.final-total {
+    font-weight: bold;
+    font-size: 1.4em;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+/* --- Suggestions Carousel Styling (MODIFIED FOR 0.5 SIZE) --- */
+#suggestions {
+    max-width: 1200px; 
+    margin: 40px auto; 
+    border: 1px solid #A5C189;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fefefe;
+}
+
+#suggestion-carousel {
+    display: flex; 
+    overflow-x: scroll; 
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 15px; /* تقليل الفجوة قليلاً */
+    padding: 10px 0;
+    justify-content: flex-start; 
+}
+
+#suggestion-carousel .product-card {
+    /* تحديد عرض البطاقة ليكون حوالي نصف العرض الأصلي (300px) */
+    min-width: 150px; 
+    max-width: 150px;
+    scroll-snap-align: start;
+    flex-shrink: 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    font-size: 0.8em; /* تصغير حجم الخط */
+}
+
+#suggestion-carousel .product-card img {
+    height: 120px; /* تصغير حجم الصورة لتناسب العرض الجديد */
+    object-fit: cover;
+}
+
+#suggestion-carousel .product-card h3 {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+#suggestion-carousel .price {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+/* --- End Suggestions Carousel Styling --- */
+
+
+/* Stock Status Styling */
+.stock-status {
+    display: block; 
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 5px 0 10px 0; 
+    padding: 3px 0;
+    border-radius: 3px;
+}
+
+.out-of-stock {
+    color: #e74c3c; /* أحمر */
+    background-color: #fcebeb; 
+    border: 1px dashed #e74c3c;
+}
+
+.low-stock {
+    color: #f39c12; /* برتقالي */
+    background-color: #fff8e1;
+    border: 1px dashed #f39c12;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #44563C;
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
