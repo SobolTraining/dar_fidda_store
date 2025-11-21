@@ -1,87 +1,123 @@
-[
-    {
-        "id": 1,
-        "sku": "AB-SG-01",
-        "name": "عباءة الصدفة الذهبية",
-        "image": "itemimages/abaya/abaya1.jpeg",
-        "description": "عباءة شيك بتطريز خفيف",
-        "megaCategory": "fashions",
-        "category": "abaya",
-        "tags": ["best-seller", "sale"],
-        "originalPrice": 85.00,
-        "discountedPrice": 75.00,
-        "sizes": ["S", "M", "L", "XL"],
-        "status": "available",
-        "isNew": true,
-        "isBestSeller": true,
-        "isGiftCard": false
+
+{
+    "PRAYER001": {
+        "nameAR": "مصلى مبطن فاخر 'الصفاء'",
+        "descriptionAR": "سجادة صلاة مبطنة طبياً لتخفيف الضغط على الركب، بخامة مخملية فاخرة.",
+        "category": "Prayer",
+        "subCategory": ["مصليات", "الأكثر مبيعاً"],
+        "price": 55.00,
+        "discountedPrice": 49.00,
+        "imageURLs": ["itemimages/prayer/mosalla_safaa.jpg"],
+        "availableSizes": ["قياس موحد"],
+        "defaultVariantID": "قياس موحد",
+        "inStock": 0,
+        
+        "shortDescriptionAR": "مبطنة طبياً، خامة مخملية ناعمة.",
+        "sizeHintAR": "قياس موحد (70x120 سم)."
     },
-    {
-        "id": 2,
-        "sku": "AB-SG-01",
-        "name": "عباءة بدر",
-        "image": "itemimages/abaya/abaya2.jpeg",
-        "description": "عباءة شيك بتطريز خفيف",
-        "megaCategory": "fashions",
-        "category": "abaya",
-        "tags": ["best-seller", "sale"],
-        "originalPrice": 85.00,
-        "discountedPrice": 75.00,
-        "sizes": ["S", "M", "L", "XL"],
-        "status": "available",
-        "isNew": true,
-        "isBestSeller": true,
-        "isGiftCard": false
-    },
-    {
-        "id": 3,
-        "sku": "IS-C-05",
-        "name": "إيشارب حرير كلاسيك",
-        "image": "itemimages/isharb/isharb2.jpeg",
-        "description": "إيشارب ناعم من الحرير الإيطالي.",
-        "megaCategory": "fashions",
-        "category": "isharbat",
-        "tags": [],
-        "originalPrice": 20.00,
+    "ABAYA403": {
+        "nameAR": "زنود قطن سادة",
+        "descriptionAR": "زنود قطنية ناعمة ومريحة للارتداء تحت العباءة، لون أسود سادة.",
+        "category": "AbayaEssentials",
+        "subCategory": ["زنود", "إضافات"],
+        "price": 3.00,
         "discountedPrice": null,
-        "sizes": null,
-        "status": "available",
-        "isNew": false,
-        "isBestSeller": false,
-        "isGiftCard": false
+        "imageURLs": ["itemimages/abaya/abaya1.jpeg"],
+        "availableSizes": ["S/M", "L/XL"],
+        "defaultVariantID": "S/M",
+        "inStock": 5,
+        
+        "shortDescriptionAR": "قطن 100%، مريحة ولا تسبب حرارة.",
+        "sizeHintAR": "يرجى اختيار مقاسك المعتاد."
+    },
+    "BOOK005": {
+        "nameAR": "المصحف الالكتروني للاطفال",
+        "descriptionAR": "المصحف الالكتروني للاطفال جزء عم.",
+        "category": "Library",
+        "subCategory": ["المكتبة العامة"],
+        "price": 12.00,
+        "discountedPrice": null,
+        "imageURLs": ["itemimages/library/book_fatat.jpg"],
+        "availableSizes": ["غلاف ورقي"],
+        "defaultVariantID": "غلاف ورقي",
+        "inStock": 15,
+        
+        "shortDescriptionAR": "وسيلة تعليمية ممتعة للأطفال.",
+        "sizeHintAR": "قياس الكتاب: صغير."
+    },
+    "BAG003": {
+        "nameAR": "حقيبة يدوية إسلامية مطرزة",
+        "descriptionAR": "حقيبة حجم كبير نقشات عديدة.",
+        "category": "Bags",
+        "subCategory": ["إسلاميات", "نسائي"],
+        "price": 24.00,
+        "discountedPrice": 19.00,
+        "imageURLs": ["itemimages/bags/bag1.jpeg"],
+        "availableSizes": ["قياس واحد"],
+        "defaultVariantID": "قياس واحد",
+        "inStock": 3,
+        
+        "shortDescriptionAR": "تطريز يدوي بنقشات تراثية فاخرة.",
+        "sizeHintAR": "قياس موحد (حجم كبير)."
+    }, 
+    "BAG004": {
+        "nameAR": "حقيبة كتف مطرزة",
+        "descriptionAR": "حقيبة حجم كبير نقشات عديدة.",
+        "category": "Bags",
+        "subCategory": ["إسلاميات", "نسائي"],
+        "price": 17.00,
+        "discountedPrice": 14.00,
+        "imageURLs": ["itemimages/bags/bag2.jpeg"],
+        "availableSizes": ["قياس واحد"],
+        "defaultVariantID": "قياس واحد",
+        "inStock": 20,
+        
+        "shortDescriptionAR": "حقيبة كتف عصرية ومقاومة للماء.",
+        "sizeHintAR": "قياس موحد (حجم متوسط)."
+    },
+    "MOKALLAF001": {
+        "nameAR": "طقم 5 قطع 'الزهرة'",
+        "descriptionAR": "طقم هدايا متكامل لتكليف البنات، يشمل ثوب صلاة، سجادة، وكتيب أدعية.",
+        "category": "Accessories",
+        "subCategory": ["أطقم تكليف"],
+        "price": 12.00,
+        "discountedPrice": null,
+        "imageURLs": ["itemimages/bags/bag1.jpeg"],
+        "availableSizes": ["قياس الأطفال (8-12 سنة)"],
+        "defaultVariantID": "قياس الأطفال (8-12 سنة)",
+        "inStock": 10,
+        
+        "shortDescriptionAR": "طقم هدايا تكليف متكامل 5 قطع.",
+        "sizeHintAR": "قياس خاص بالأطفال (العمر)."
+    },
+    "GIFT009": {
+        "nameAR": "طقم بخور ومبخرة فاخر",
+        "descriptionAR": "طقم بخور عود مع مبخرة نحاسية أنيقة، يأتي في صندوق هدايا مميز.",
+        "category": "Gifts",
+        "subCategory": ["هدايا يدوية"],
+        "price": 40.00,
+        "discountedPrice": 35.00,
+        "imageURLs": ["itemimages/gifts/gift1.jpeg"],
+        "availableSizes": ["طقم كامل"],
+        "defaultVariantID": "طقم كامل",
+        "inStock": 3,
+        
+        "shortDescriptionAR": "عود طبيعي مع مبخرة نحاسية يدوية.",
+        "sizeHintAR": "طقم كامل (قياس العلبة)."
+    },
+    "MONAS008": {
+        "nameAR": "فانوس رمضان مضيء",
+        "descriptionAR": "فانوس معدني تقليدي يعمل بالبطارية، لإضفاء جو رمضاني دافئ.",
+        "category": "Occasions",
+        "subCategory": ["شهر رمضان", "زينة مواليد"],
+        "price": 15.00,
+        "discountedPrice": null,
+        "imageURLs": ["itemimages/munasabat/ramadan_fanous.jpg"],
+        "availableSizes": ["قياس وسط"],
+        "defaultVariantID": "قياس وسط",
+        "inStock": 25,
+        
+        "shortDescriptionAR": "فانوس معدني تقليدي مضيء.",
+        "sizeHintAR": "قياس وسط (ارتفاع 30 سم)."
     }
-    {
-        "id": 4,
-        "sku": "AB-SG-01",
-        "name": "شنطة",
-        "image": "itemimages/bags/bag1.jpeg",
-        "description": "shantaaa",
-        "megaCategory": "fashions",
-        "category": "abaya",
-        "tags": ["best-seller", "sale"],
-        "originalPrice": 85.00,
-        "discountedPrice": 75.00,
-        "sizes": ["S", "M", "L", "XL"],
-        "status": "available",
-        "isNew": true,
-        "isBestSeller": true,
-        "isGiftCard": false
-    },
-    {
-        "id": 5,
-        "sku": "AB-SG-01",
-        "name": "شنطة",
-        "image": "itemimages/gifts/gift1.jpeg",
-        "description": "shantaaa",
-        "megaCategory": "fashions",
-        "category": "abaya",
-        "tags": ["best-seller", "sale"],
-        "originalPrice": 85.00,
-        "discountedPrice": 75.00,
-        "sizes": ["S", "M", "L", "XL"],
-        "status": "available",
-        "isNew": true,
-        "isBestSeller": true,
-        "isGiftCard": false
-    },
-]
+}
